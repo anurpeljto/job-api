@@ -40,7 +40,7 @@ app.use(cors());
 app.use(xss());
 
 
-app.use('/docs', swagger.serve(swaggerDocs));
+app.use('/docs', swagger.serve, swagger.setup(swaggerDocs));
 
 // routes
 app.get('/', (req, res) => {

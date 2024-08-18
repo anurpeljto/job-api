@@ -46,6 +46,8 @@ paths:
           description: ''
           headers: {}
       deprecated: false
+      security: 
+      - bearer: []
   /jobs/{id}:
     get: 
       tags:
@@ -192,6 +194,8 @@ components:
       example:
         company: company
         position: position
+      security:
+      - bearer: []
     LoginRequest:
       title: LoginRequest
       required:
@@ -246,7 +250,6 @@ components:
     bearer:
       type: http
       scheme: bearer
-security: []
 tags:
 - name: Job
   description: ''
